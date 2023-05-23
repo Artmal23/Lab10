@@ -41,7 +41,29 @@
     rawFile.send(null);
 }
 readTextFile("1.txt")
-    
+   function readTextFile1(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                f1 = JSON.parse(allText)
+                console.log(f1)
+                b1.addEventListener("click", cl)
+                function cl(){    
+                lm.innerHTML=`<span>${f1.Прізвища}</span>`
+                }
+            }
+        }
+    }
+    rawFile.send(null);
+}
+readTextFile("2.txt")
 
 /*b1.addEventListener("click", cl)
 b2.addEventListener("click", cl1)
