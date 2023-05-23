@@ -18,8 +18,10 @@
             b1=document.getElementById('1')
             b2=document.getElementById('2')
             lm= document.querySelector('.out')
+    function readTextFile(file)
+{
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", '1.txt', false);
+    rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -27,24 +29,28 @@
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-            console.log(allText)
-                
+                f1 = JSON.parse(allText)
+                console.log(f1)
+                b1.addEventListener("click", cl)
+                function cl(){    
+                lm.innerHTML=`<span>${f.ProgrammingLanguage}</span>`
+                }
             }
         }
-    
+    }
     rawFile.send(null);
-    }       
-     f1 = JSON.parse(allText)
-    console.log(f1)
+}
+readTextFile("1.txt")
+    
 
-b1.addEventListener("click", cl)
+/*b1.addEventListener("click", cl)
 b2.addEventListener("click", cl1)
 function cl(){    
 lm.innerHTML=`<span>${f.ProgrammingLanguage}</span>`
 }
 function cl1(){    
 lm.innerHTML=`<span>${f1.Прізвища}</span>`
-}
+}*/
         </script>
         
 
