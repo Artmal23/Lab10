@@ -44,7 +44,7 @@ readTextFile("1.txt")
    function readTextFile1(file)
 {
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file1, false);
+    rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
