@@ -15,10 +15,11 @@
            <span>Output: </span><span class="out"></span>      
         </div>
         <script type="module">
-         function readTextFile(file)
-{
+            b1=document.getElementById('1')
+            b2=document.getElementById('2')
+            lm= document.querySelector('.out')
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
+    rawFile.open("GET", '1.txt', false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -27,18 +28,23 @@
             {
                 var allText = rawFile.responseText;
             console.log(allText)
+                
             }
         }
-    }
+    
     rawFile.send(null);
+    }       
+     f1 = JSON.parse(allText)
+    console.log(f1)
 }
-
-
-readTextFile("1.txt");
-            
-           /* const fs = require("fs")
-        let fileContent = fs.readFileSync("1.txt", "utf8");
-            console.log(fileContent)*/
+b1.addEventListener("click", cl)
+b2.addEventListener("click", cl1)
+function cl(){    
+lm.innerHTML=`<span>${f.ProgrammingLanguage}</span>`
+}
+function cl1(){    
+lm.innerHTML=`<span>${f1.Прізвища}</span>`
+}
         </script>
         
 
