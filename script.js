@@ -1,5 +1,4 @@
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var f = fso.OpenTextFile(inp.value, 1);
+let fileContent = fs.readFileSync("1.txt", "utf8")
 
 //l = new File([`{"ProgrammingLanguage" :["C++","Python","Ruby","Javascript"]}`],"1.txt")
 
