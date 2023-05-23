@@ -29,8 +29,8 @@
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                f1 = JSON.parse(allText)
-                console.log(f1)
+                f = JSON.parse(allText)
+                console.log(f)
                 b1.addEventListener("click", cl)
                 function cl(){    
                 lm.innerHTML=`<span>${f.ProgrammingLanguage}</span>`
