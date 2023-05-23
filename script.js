@@ -1,4 +1,5 @@
 let fileContent = fs.readFileSync("1.txt", "utf8")
+console.log(fileContent)
 
 //l = new File([`{"ProgrammingLanguage" :["C++","Python","Ruby","Javascript"]}`],"1.txt")
 
