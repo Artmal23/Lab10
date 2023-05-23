@@ -44,7 +44,7 @@ readTextFile("1.txt")
    function readTextFile1(file)
 {
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
+    rawFile.open("GET", file1, false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -54,8 +54,8 @@ readTextFile("1.txt")
                 var allText = rawFile.responseText;
                 f1 = JSON.parse(allText)
                 console.log(f1)
-                b1.addEventListener("click", cl)
-                function cl(){    
+                b2.addEventListener("click", cl1)
+                function cl1(){    
                 lm.innerHTML=`<span>${f1.Прізвища}</span>`
                 }
             }
@@ -65,14 +65,7 @@ readTextFile("1.txt")
 }
 readTextFile1("2.txt")
 
-/*b1.addEventListener("click", cl)
-b2.addEventListener("click", cl1)
-function cl(){    
-lm.innerHTML=`<span>${f.ProgrammingLanguage}</span>`
-}
-function cl1(){    
-lm.innerHTML=`<span>${f1.Прізвища}</span>`
-}*/
+
         </script>
         
 
