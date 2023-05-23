@@ -15,9 +15,13 @@
            <span>Output: </span><span class="out"></span>      
         </div>
         <script type="module">
-            const fs = require("fs")
+            var json;
+$.get('/data.json', function (data) {
+ json = data;
+})
+           /* const fs = require("fs")
         let fileContent = fs.readFileSync("1.txt", "utf8");
-            console.log(fileContent)
+            console.log(fileContent)*/
         </script>
         
 
