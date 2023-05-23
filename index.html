@@ -26,7 +26,7 @@
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-            
+            console.log(allText)
             }
         }
     }
@@ -35,7 +35,7 @@
 
 
 readTextFile("1.txt");
-            console.log(allText)
+            
            /* const fs = require("fs")
         let fileContent = fs.readFileSync("1.txt", "utf8");
             console.log(fileContent)*/
