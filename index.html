@@ -15,7 +15,26 @@
            <span>Output: </span><span class="out"></span>      
         </div>
         <script type="module">
-         import * as fs from 'node:fs'
+         function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+
+readTextFile("");
            /* const fs = require("fs")
         let fileContent = fs.readFileSync("1.txt", "utf8");
             console.log(fileContent)*/
